@@ -18,25 +18,4 @@ export default function App() {
     </NavigationContainer>
   )
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "black",
-    justifyContent: "space-evenly",
-  },
-  row: {
-    flexDirection: "row",
-    alignContent: "flex-end",
-  },
 
-  calcullationValueText: {
-    color: "#a19c9c",
-    fontSize: 30,
-    textAlign: "right",
-  },
-  resultText: {
-    color: "white",
-    fontSize: 60,
-    textAlign: "right",
-  },
-});
