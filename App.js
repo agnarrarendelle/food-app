@@ -7,7 +7,7 @@ import { Cell, Section, TableView } from "react-native-tableview-simple";
 import HomeScreen from "./component/HomeScreen";
 import Menu from "./component/Menu";
 
-
+const Stack = createStackNavigator()
 export default function App() {
   return (
     <NavigationContainer>
