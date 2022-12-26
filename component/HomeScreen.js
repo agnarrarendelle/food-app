@@ -12,7 +12,6 @@ import React from "react";
 import { ScrollView } from "react-native-gesture-handler";
 import { Cell, Section, TableView } from "react-native-tableview-simple";
 
-type Props = NativeStackScreenProps<StackParamList, "Restaurants">;
 const windowSize = Dimensions.get("window");
 
 export const restaurants = [
@@ -70,7 +69,7 @@ export const restaurants = [
   },
 ];
 
-function HomeScreen(props: Props) {
+function HomeScreen(props) {
   return (
     <SafeAreaView>
       <ScrollView>

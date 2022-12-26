@@ -7,13 +7,6 @@ import { Cell, Section, TableView } from "react-native-tableview-simple";
 import HomeScreen from "./component/HomeScreen";
 import Menu from "./component/Menu";
 
-export type StackParamList = {
-  Restaurants:undefined,
-  Menu:{restaurantName:string}
-}
-
-const Stack = createStackNavigator<StackParamList>();
-
 
 export default function App() {
   return (

@@ -1,26 +1,24 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import React from "react";
-import { SafeAreaView, Text ,View,StyleSheet} from "react-native";
+import { SafeAreaView, Text, View, StyleSheet } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import { Cell, Section, TableView } from "react-native-tableview-simple";
 import { StackParamList } from "../App";
 import { restaurants } from "./HomeScreen";
 
-type Props = NativeStackScreenProps<StackParamList, "Menu">;
-
-const Menu = (props: Props) => {
+const Menu = (props) => {
   const items = restaurants.find(
     (r) => r.title === props.route.params.restaurantName
-  )?.items;
+  ).items;
 
   return (
     <SafeAreaView>
       <ScrollView>
         <TableView>
-          {items?.map((item) => (
+          {items.map((item) => (
             <View key={item.title}>
               <Text style={styles.titleText}>{item.title}</Text>
-              <Section >
+              <Section>
                 {item.contens.map((c) => (
                   <Cell key={c.title} title={c.title}></Cell>
                 ))}
@@ -34,10 +32,10 @@ const Menu = (props: Props) => {
 };
 
 const styles = StyleSheet.create({
-    titleText:{
-        paddingTop:10,
-        paddingLeft:20,
-        color:"#8d8d8d"
-    }
-})
+  titleText: {
+    paddingTop: 10,
+    paddingLeft: 20,
+    color: "#8d8d8d",
+  },
+});
 export default Menu;
